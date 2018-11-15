@@ -1,13 +1,10 @@
 package de.hhu.propra.db.entities;
 
+import java.util.List;
 import lombok.Data;
+import javax.persistence.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Data // Lombok - Generiert Getter, Setter, toString, ...
+@Data
 @Entity
 public class Kunde {
     @Id
@@ -18,5 +15,6 @@ public class Kunde {
     private String stadt;
     private Integer plz;
 
-    // TODO: Hier muss irgendetwas mit Autos hin...
+    @OneToMany(cascade=CascadeType.ALL)
+    private List<Auto> autos;
 }
