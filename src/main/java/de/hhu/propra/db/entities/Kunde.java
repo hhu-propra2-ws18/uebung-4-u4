@@ -18,5 +18,6 @@ public class Kunde {
     private String stadt;
     private Integer plz;
 
-    // TODO: Hier muss irgendetwas mit Autos hin...
+    @OneToMany(cascade=CascadeType.ALL)
+    private List<Auto> autos;
 }
