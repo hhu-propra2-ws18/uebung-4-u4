@@ -1,5 +1,6 @@
 package de.hhu.propra.db.entities;
 
+
 import lombok.Data;
 
 import javax.persistence.*;
@@ -15,6 +16,7 @@ public class Kunde {
     private String name;
     private String stadt;
     private Integer plz;
+
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Auto> autos;
