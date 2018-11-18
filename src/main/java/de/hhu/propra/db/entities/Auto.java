@@ -13,7 +13,7 @@ public class Auto{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long id;
     private String marke;
     private String farbe;
     private double hubraum;
